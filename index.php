@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="./img/logo.png" type="image" >
+<link rel="icon" href="./img/logo.png" type="image">
 
 <?php
 include './connect.php';
@@ -21,9 +20,10 @@ if (!function_exists('currency_format')) {
     }
 }
 ?>
+
 <head>
     <?php include './partitals/css.php'; ?>
-  
+
 </head>
 
 <body>
@@ -56,20 +56,20 @@ if (!function_exists('currency_format')) {
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
 
-                    <div class="col-md-4 col-xs-6">
-                        <div class="shop">
+                <div class="col-md-4 col-xs-6">
+                    <div class="shop">
 
 
-                            <div class="shop-img">
-                                <img src="./img/<?php echo $row["image_name"]; ?>">
-                            </div>
-                            <div class="shop-body">
-                                <h3><?php echo $row["tendanhmuc"]; ?><br>Collection</h3>
-
-                                <a href="danhsachhanghoa.php?category_id=<?php echo $row['id'] ?>" class="cta-btn"> Shop now <i class="fa fa-arrow-circle-right"></i></a>
-                            </div>
+                        <div class="shop-img">
+                            <img src="./img/<?php echo $row["image_name"]; ?>">
+                        </div>
+                        <div class="shop-body">
+                            <h3><?php echo $row["tendanhmuc"]; ?><br>Collection</h3>
+                            <a href="danhsachhanghoa.php?category_id=<?php echo $row['id'] ?>" class="cta-btn"> Shop now
+                                <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                </div>
                 <?php
                 }
 
@@ -104,7 +104,9 @@ if (!function_exists('currency_format')) {
                                 <?php
                                 while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                    <li><a href="./index.php?category_id=<?php echo $row['id'] ?>"><?php echo $row['tendanhmuc']; ?></a></li>
+                                <li><a
+                                        href="./index.php?category_id=<?php echo $row['id'] ?>"><?php echo $row['tendanhmuc']; ?></a>
+                                </li>
                                 <?php
                                 }
 
@@ -140,43 +142,51 @@ if (!function_exists('currency_format')) {
                                         while ($row = mysqli_fetch_array($kq)) {
 
                                         ?>
-                                            <!-- product -->
-                                            <div class="product">
-                                                <div class="product-img">
-                                                    <img src="./img/<?php echo $row["image_name"]; ?>" alt="">
-                                                    <div class="product-label">
-                                                        <span class="sale">-30%</span>
-                                                        <span class="new">NEW</span>
-                                                    </div>
+                                        <!-- product -->
+                                        <div class="product">
+                                            <div class="product-img">
+                                                <img src="./img/<?php echo $row["image_name"]; ?>" alt="">
+                                                <div class="product-label">
+                                                    <span class="sale">-30%</span>
+                                                    <span class="new">NEW</span>
                                                 </div>
-                                                <div class="product-body">
-                                                    <p class="product-category">Category</p>
-                                                    <h3 class="product-name"><a href="detail.php?id=<?php echo $row["ID"]; ?>"><?php echo $row["title"]; ?></a></h3>
-                                                    <h4 class="product-price"><?php echo  currency_format($row["new_price"]); ?>&nbsp;<del class="product-old-price"><?php echo  currency_format($row["old_price"]); ?></del></h4>
-                                                    <div class="product-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <div class="product-btns">
-                                                        <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                                        <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                                        <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                                    </div>
-                                                </div>
-
-
-
-
                                             </div>
+                                            <div class="product-body">
+                                                <p class="product-category">Category</p>
+                                                <h3 class="product-name"><a
+                                                        href="detail.php?id=<?php echo $row["ID"]; ?>"><?php echo $row["title"]; ?></a>
+                                                </h3>
+                                                <h4 class="product-price">
+                                                    <?php echo  currency_format($row["new_price"]); ?>&nbsp;<del
+                                                        class="product-old-price"><?php echo  currency_format($row["old_price"]); ?></del>
+                                                </h4>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="product-btns">
+                                                    <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+                                                            class="tooltipp">add to wishlist</span></button>
+                                                    <button class="add-to-compare"><i class="fa fa-exchange"></i><span
+                                                            class="tooltipp">add to compare</span></button>
+                                                    <button class="quick-view"><i class="fa fa-eye"></i><span
+                                                            class="tooltipp">quick view</span></button>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
                                 </form>
 
                                 <!-- /product -->
 
 
-                            <?php
+                                <?php
                                         }
 
                             ?>
@@ -204,7 +214,7 @@ if (!function_exists('currency_format')) {
         <div class="container">
             <!-- row -->
             <div class="row">
-               
+
                 <div class="col-md-12">
                     <div class="hot-deal">
                         <ul class="hot-deal-countdown">
@@ -234,28 +244,29 @@ if (!function_exists('currency_format')) {
                             </li>
                         </ul>
                         <script>
-                    const days = document.getElementById('days');
-                    const hours = document.getElementById('hours');
-                    const mins = document.getElementById('mins');
-                    const secs = document.getElementById('secs');
-                    const currentYear = new Date().getFullYear();
-                    const hotDealTime = new Date(`December 20 ${currentYear } 00:00:00`);
-                    function updateCountdown() {
-                        const currentTime = new Date();
-                        const diff = hotDealTime - currentTime;
+                        const days = document.getElementById('days');
+                        const hours = document.getElementById('hours');
+                        const mins = document.getElementById('mins');
+                        const secs = document.getElementById('secs');
+                        const currentYear = new Date().getFullYear();
+                        const hotDealTime = new Date(`December 20 ${currentYear } 00:00:00`);
 
-                        const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-                        const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-                        const m = Math.floor(diff / 1000 / 60) % 60;
-                        const s = Math.floor(diff / 1000) % 60;
+                        function updateCountdown() {
+                            const currentTime = new Date();
+                            const diff = hotDealTime - currentTime;
 
-                        days.innerHTML = d;
-                        hours.innerHTML = h < 10 ? '0' + h : h;
-                        mins.innerHTML = m < 10 ? '0' + m : m;
-                        secs.innerHTML = s < 10 ? '0' + s : s;
-                    }
-                    setInterval(() => updateCountdown(), 1000);
-                </script>
+                            const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+                            const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+                            const m = Math.floor(diff / 1000 / 60) % 60;
+                            const s = Math.floor(diff / 1000) % 60;
+
+                            days.innerHTML = d;
+                            hours.innerHTML = h < 10 ? '0' + h : h;
+                            mins.innerHTML = m < 10 ? '0' + m : m;
+                            secs.innerHTML = s < 10 ? '0' + s : s;
+                        }
+                        setInterval(() => updateCountdown(), 1000);
+                        </script>
                         <h2 class="text-uppercase">hot deal this week</h2>
                         <p>New Collection Up to 50% OFF</p>
                         <a class="primary-btn cta-btn" href="#">Shop now</a>
@@ -290,7 +301,9 @@ if (!function_exists('currency_format')) {
                                 while ($row = mysqli_fetch_array($result)) {
 
                                 ?>
-                                    <li><a href="index.php?category_id=<?php echo $row['id'] ?>"><?php echo $row['tendanhmuc']; ?></a></li>
+                                <li><a
+                                        href="index.php?category_id=<?php echo $row['id'] ?>"><?php echo $row['tendanhmuc']; ?></a>
+                                </li>
                                 <?php
                                 }
                                 ?>
@@ -311,11 +324,10 @@ if (!function_exists('currency_format')) {
                                     <!-- product -->
                                     <?php
                                     if (!isset($_GET['category_id'])) {
-
                                         $sql = "SELECT * FROM product_info ";
                                     } else {
                                         $noibat = 'Có';
-                                        $sql = "SELECT * FROM product_info WHERE category_id = '" .$category_id. "' AND featured = '" . $noibat . "'  LIMIT 5";
+                                        $sql = "SELECT * FROM product_info WHERE category_id = '" . $category_id . "' AND featured = '" . $noibat . "'  LIMIT 5";
                                     }
                                     $query = mysqli_query($conn, $sql);
 
@@ -323,35 +335,43 @@ if (!function_exists('currency_format')) {
                                     while ($row = mysqli_fetch_array($query)) {
 
                                     ?>
-                                        <div class="product">
-                                            <div class="product-img">
-                                                <img src="./img/<?php echo $row["image_name"]; ?>" alt="">
-                                                <div class="product-label">
-                                                    <span class="sale">-30%</span>
-                                                    <span class="new">NEW</span>
-                                                </div>
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="./img/<?php echo $row["image_name"]; ?>" alt="">
+                                            <div class="product-label">
+                                                <span class="sale">-30%</span>
+                                                <span class="new">NEW</span>
                                             </div>
-                                            <div class="product-body">
-                                                <p class="product-category">Category</p>
-                                                <h3 class="product-name"><a href="detail.php?id=<?php echo $row["ID"]; ?>"><?php echo $row["title"]; ?></a></h3>
-                                                <h4 class="product-price"><?php echo  currency_format($row["new_price"]);?>&nbsp;<del class="product-old-price"><?php echo  currency_format($row["old_price"]); ?></del></h4>
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="product-btns">
-                                                    <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                                    <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                                    <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                                </div>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">Category</p>
+                                            <h3 class="product-name"><a
+                                                    href="detail.php?id=<?php echo $row["ID"]; ?>"><?php echo $row["title"]; ?></a>
+                                            </h3>
+                                            <h4 class="product-price">
+                                                <?php echo  currency_format($row["new_price"]); ?>&nbsp;<del
+                                                    class="product-old-price"><?php echo  currency_format($row["old_price"]); ?></del>
+                                            </h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
-
+                                            <div class="product-btns">
+                                                <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+                                                        class="tooltipp">add to wishlist</span></button>
+                                                <button class="add-to-compare"><i class="fa fa-exchange"></i><span
+                                                        class="tooltipp">add to compare</span></button>
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span
+                                                        class="tooltipp">quick view</span></button>
+                                            </div>
                                         </div>
 
-                                        <!-- /product -->
+                                    </div>
+
+                                    <!-- /product -->
 
                                     <?php
                                     }
